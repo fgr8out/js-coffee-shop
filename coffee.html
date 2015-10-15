@@ -46,16 +46,25 @@
 <script>
 
     // Set these 3 variables to their DOM elements
-
+//Define our variables for image and revenue
     var myImage;
     var myRevenueMessage;
     
-
+//we assigned 'my image' to DOM to get elementID which is 'coffee-image'
     myImage = document.getElementById("coffee-image");
     myRevenueMessage = document.getElementById("message");
     myImage.setAttribute("src","static/coffee_machine.jpg");
-    function makeCoffee(src, "static/coffee-image.jpg");
+
+    //write function makeCoffee
+    //This function if you click the image it should change picture
+    function makeCoffee() {
     // use this dictionary in further study step
+        myImage = document.getElementById("coffee-image");
+        myImage.setAttribute("src", "static/coffee_mug.jpg");
+    }
+    //call method on 'myImage' when user click function will activate
+    myImage.addEventListener("click", makeCoffee);
+
 
     var prices = {
         "brew": 2.05,
